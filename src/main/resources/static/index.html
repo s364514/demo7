@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<script src="index.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig-3</title>
+    <script src="validering.js"></script>
+
+</head>
+
+
+
+<body>
+
+<br><h2> Bestilling av kinobilletter </h2></br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+
+    <form class="form">
+        <div class="form-group">
+            <label for="fornavn">Fornavn </label>
+            <input type="text" class="form-control" id="fornavn" onchange="validerFornavn(this.value)">
+            <span id="feilfornavn" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label for="etternavn">Etternavn</label>
+            <input type="text" class="form-control" id="etternavn" onchange="validerEtternavn(this.value)">
+            <span id="feiletternavn" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label for="epost">E-post</label>
+            <input type="text" class="form-control" id="epost" onchange="validerEpost(this.value)">
+            <span id="feilepost" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label for="telefonnr">Telefonnr</label>
+            <input type="text" class="form-control" id="telefonnr" onchange="validertelefonnr(this.value)" >
+            <span id="feiltelefonnr" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label for="antall">Antall</label>
+            <input type="number" class="form-control" id="antall">
+        </div>
+        <div class="form-group">
+            <label for="film">Film</label>
+            <div id="film" class="dropdown"></div>
+        </div>
+        <div class="form-group">
+            <label for="dato">Dato</label>
+            <div id="dato" class="dropdown"></div>
+        </div>
+    </form>
+
+    <button class="btn btn-primary" onclick="hentkunde()">Trykk her</button>
+    </div>
+        <div class="col-md-8">
+    <div id="utvei" class="table-responsive"></div>
+
+            <h3>Alle kundene:</h3>
+
+<button  class="btn btn-danger" onclick="slettAlle()">Slett</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
